@@ -1,11 +1,16 @@
 <template>
   <h3 id="Title" class="text-left font-weight-thin">
     Inter-Boutique <strong>Digital Market </strong>
-    <v-row align="center" no-gutters style="height: 50px">
-      <v-col v-for="n in 4" :key="n">
-        <clotheCard nombre="Prueba" categoria="Upwear"></clotheCard>
-      </v-col>
-    </v-row>
+    <v-btn id="home-button" depressed color="black" dark @click="goHome"> Home </v-btn>
+    <v-container id="products_grid">
+      <v-row v-for="i in 2" :key="i" align="center"  style="height: 200px">      
+        <v-col v-for="n in 4" :key="n" style="max-width: 225px">
+          <clotheCard nombre="Prueba" categoria="Upwear"></clotheCard>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    
     
   </h3>
 </template>
@@ -24,6 +29,17 @@
   font-size: 50px;
   line-height: 74px;
 }
+
+#products_grid {
+ position: absolute;
+ left: 307px;
+}
+
+#home-button{
+  position: absolute;
+  top: 22px;
+  right: -100px;
+}
 </style>
 
 <script>
@@ -34,6 +50,16 @@ export default {
 
   components: {
     clotheCard,
+  },
+
+  methods:{
+    goBack(){
+      this.$router.go(-1);
+    },
+    goHome(){
+      this.$router.push('/');
+    },
+
   }
 };
 </script>

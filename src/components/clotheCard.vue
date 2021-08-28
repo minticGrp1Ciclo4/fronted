@@ -1,27 +1,24 @@
 <template>
-  <v-sheet color="grey lighten-4" elevation="1" height="150" width="200">
-      <v-container >
-              <v-layout>
-                <v-flex>  
-                  <v-row align="end" no-gutters >                  
-                  <v-chip class="font-weight-thin" color="grey lighten-1">{{nombre}}</v-chip>
-                  <v-chip class="font-weight-thin" color="grey lighten-1">{{categoria}}</v-chip>
-                  </v-row>
-                </v-flex>
-              </v-layout>
-            </v-container>
-  </v-sheet>
+<div>
+  <v-sheet class="rounded" color="grey lighten-1"  elevation="1" height="150" width="200">
+        <v-row  align="end" style="height: 170px;">
+          <v-col align="end" >
+            <v-chip>{{nombre}}</v-chip>      
+            <span style="width: 25px">  </span>
+            <v-chip>{{categoria}}</v-chip>
+          </v-col>
+        </v-row>
+      </v-sheet>
+</div>
+  
 </template>
 
 <script>
 export default {
   name: "clotheCard",
-  props:['nombre','categoria'],
-  data(){
-    return{
-    }
+  props:['nombre','categoria']
     
-  }
+  
   
 };
 </script>
