@@ -7,6 +7,7 @@
     <thumbnail-card id="thumb-1" imagen="@/assets/Camiseta.png"></thumbnail-card>
     <thumbnailGorra id="thumb-2"></thumbnailGorra>
     <thumbnailSweater id="thumb-3"></thumbnailSweater>
+    <subhead id="sub"></subhead>
   </v-container>
 </template>
 
@@ -57,18 +58,29 @@
   left: 1000px;
   top: 473px;
 }
+
+#sub{
+  position: absolute;
+  left: 950px;
+  top: 250px;
+}
+
+
 </style>
 <script>
 import thumbnailCard from "@/components/thumbnailCard.vue";
 import thumbnailGorra from "@/components/thumbnailGorra.vue";
 import thumbnailSweater from "@/components/thumbnailSweater.vue";
+import subhead from "@/components/subhead.vue";
 export default {
   name: "Home",
 
   components: {
     thumbnailCard,
     thumbnailGorra,
-    thumbnailSweater
+    thumbnailSweater,
+    subhead
+    
     
   },
 
